@@ -1,28 +1,28 @@
-package com.imqueue;
+package com.imqueue.test;
 
-public class Test {
+import com.imqueue.ImmutableQueue;
+import com.imqueue.Queue;
 
+public class ImmutableQueueTest {
 	public static void main(String[] args) {
-		Queue<Integer> imq=new ImmutableQueue<Integer>();
-		
+		Queue<Integer> imq = new ImmutableQueue<Integer>();
+
 		imq.enQueue(17);
-		
+
 		imq.enQueue(27);
-		
+
 		imq.enQueue(47);
 		imq.enQueue(37);
 		imq.enQueue(97);
-		
+
 		System.out.println(imq.isEmpty());
-		
+
 		System.out.println(imq.head());
-		
-		while(!imq.isEmpty()) {
+
+		while (!imq.isEmpty()) {
 			imq.deQueue();
-			
 		}
-		
+
 		System.out.println(imq.isEmpty());
 	}
-
 }
