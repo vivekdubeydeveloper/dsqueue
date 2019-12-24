@@ -1,0 +1,14 @@
+1)I have designed microservices based architecture.
+2)HA PROXY Load balacer cluster will distribute load to different API Gateway.
+3)For API Gateway we are using ZUUL Cluster.
+4)Zuul will perform client side load balancing for microservices instances,Hystrix can be used for fault tolerance in ZUUL.
+5)I am using Eureka HA(to avoid single point of failure) for service discovery,if one will go down other instance can take responsibility.
+6)I am using spring boot microservices(we can user spring webflux reactive also) for pusing data into kafka stream.
+7)We can scale these micoservices using docker,docker swarm/Kubernetes.
+8)We are pushing data into apache kafka stream, we are creating real time data pipiline.
+9)Apache spark will take data from Kafka stream and create RDD(Resilient Distributed Datasets).
+10)Apache spark will give RDD to apache ignite,which can be shared between multiple spark job.
+11)With Ignite, Spark users can configure primary and secondary indexes that can bring up huge performance gains.
+12)We will use Apache Cassandra as storage for persistence writes from Ignite.
+13)Time series spark data processing will take data from Ignite and process complete data for analytics.
+14)We will use microservices to pull analytics data from spark and show to users.
